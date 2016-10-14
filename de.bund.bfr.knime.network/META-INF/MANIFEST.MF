@@ -9,7 +9,6 @@ Require-Bundle: org.knime.base;bundle-version="3.2.0",
  org.knime.network.base,
  org.knime.network.core,
  org.knime.timeseries,
- org.knime.js.views,
  org.knime.ext.jep,
  org.eclipse.jdt.annotation;bundle-version="2.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
