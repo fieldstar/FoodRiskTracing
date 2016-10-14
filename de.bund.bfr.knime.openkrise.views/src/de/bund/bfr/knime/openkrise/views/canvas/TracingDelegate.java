@@ -716,7 +716,7 @@ public class TracingDelegate<V extends Node> {
 		public void paint(Graphics graphics) {
 			int w = canvas.getCanvasSize().width;
 			int h = canvas.getCanvasSize().height;
-			Font font = new Font("Default", Font.BOLD, 20);
+			Font font = new Font("Default", Font.PLAIN, 12);
 
 			Graphics2D g = (Graphics2D) graphics;
 			Color currentColor = g.getColor();
@@ -729,26 +729,27 @@ public class TracingDelegate<V extends Node> {
 			int dLogo = (height - logoHeight) / 2;
 
 			int dx = 10;
-			String s1 = "Created with";
+			String s1 = "Copyright Reserved.";
 			int sw1 = (int) font.getStringBounds(s1, g.getFontRenderContext()).getWidth();
-			String s2 = "by";
+			String s2 = "食品安全追溯@CSUST";
 			int sw2 = (int) font.getStringBounds(s2, g.getFontRenderContext()).getWidth();
 			FoodChainLabLogo logo1 = new FoodChainLabLogo();
-			int iw1 = logo1.getOrigWidth() * logoHeight / logo1.getOrigHeight();
+		/*	int iw1 = logo1.getOrigWidth() * logoHeight / logo1.getOrigHeight();*/
+			int iw1=0;
 			BfrLogo logo2 = new BfrLogo();
-			int iw2 = logo2.getOrigWidth() * logoHeight / logo2.getOrigHeight();
-
+			//int iw2 = logo2.getOrigWidth() * logoHeight / logo2.getOrigHeight();
+			int iw2=0;
 			g.setColor(ZoomingPaintable.BACKGROUND);
-			g.fillRect(w - sw1 - iw1 - sw2 - iw2 - 5 * dx, h - height, sw1 + iw1 + sw2 + iw2 + 5 * dx, height);
+		//	g.fillRect(w - sw1 - iw1 - sw2 - iw2 - 5 * dx, h - height, sw1 + iw1 + sw2 + iw2 + 5 * dx, height);
 			g.setColor(Color.BLACK);
-			g.drawRect(w - sw1 - iw1 - sw2 - iw2 - 5 * dx, h - height, sw1 + iw1 + sw2 + iw2 + 5 * dx - 1, height - 1);
+		//	g.drawRect(w - sw1 - iw1 - sw2 - iw2 - 5 * dx, h - height, sw1 + iw1 + sw2 + iw2 + 5 * dx - 1, height - 1);
 			g.setFont(font);
-			g.drawString(s1, w - sw1 - iw1 - sw2 - iw2 - 4 * dx, h - fontHeight - dFont + fontAscent);
-			logo1.setDimension(new Dimension(iw1, logoHeight));
-			logo1.paintIcon(null, g, w - iw1 - sw2 - iw2 - 3 * dx, h - logoHeight - dLogo);
+		//	g.drawString(s1, w - sw1 - iw1 - sw2 - iw2 - 4 * dx, h - fontHeight - dFont + fontAscent);
+		//	logo1.setDimension(new Dimension(iw1, logoHeight));
+		//	logo1.paintIcon(null, g, w - iw1 - sw2 - iw2 - 3 * dx, h - logoHeight - dLogo);
 			g.drawString(s2, w - sw2 - iw2 - 2 * dx, h - fontHeight - dFont + fontAscent);
-			logo2.setDimension(new Dimension(iw2, logoHeight));
-			logo2.paintIcon(null, g, w - iw2 - dx, h - logoHeight - dLogo);
+		//	logo2.setDimension(new Dimension(iw2, logoHeight));
+		//	logo2.paintIcon(null, g, w - iw2 - dx, h - logoHeight - dLogo);
 
 			g.setColor(currentColor);
 			g.setFont(currentFont);
