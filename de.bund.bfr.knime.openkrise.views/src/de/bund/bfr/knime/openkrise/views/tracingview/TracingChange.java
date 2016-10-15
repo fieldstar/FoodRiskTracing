@@ -20,6 +20,7 @@
 package de.bund.bfr.knime.openkrise.views.tracingview;
 
 import java.awt.geom.Point2D;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
