@@ -20,6 +20,7 @@
 package de.bund.bfr.knime.openkrise.views.canvas;
 
 import java.awt.BorderLayout;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
@@ -126,6 +127,7 @@ public class DateSlider extends JPanel {
 
 	private void configChanged() {
 		Stream.of(getListeners(DateListener.class)).forEach(l -> l.configChanged(this));
+		
 	}
 
 	private static GregorianCalendar addDaysTo(GregorianCalendar c, int days) {

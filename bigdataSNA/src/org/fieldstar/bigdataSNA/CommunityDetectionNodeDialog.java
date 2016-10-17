@@ -2,6 +2,7 @@ package org.fieldstar.bigdataSNA;
 
 import org.knime.core.node.defaultnodesettings.DefaultNodeSettingsPane;
 import org.knime.core.node.defaultnodesettings.DialogComponentNumber;
+import org.knime.core.node.defaultnodesettings.SettingsModelDouble;
 import org.knime.core.node.defaultnodesettings.SettingsModelIntegerBounded;
 
 /**
@@ -31,7 +32,9 @@ public class CommunityDetectionNodeDialog extends DefaultNodeSettingsPane {
                     CommunityDetectionNodeModel.DEFAULT_COUNT,
                     Integer.MIN_VALUE, Integer.MAX_VALUE),
                     "Counter:", /*step*/ 1, /*componentwidth*/ 5));
-                    
+
+  
     }
+
 }
 

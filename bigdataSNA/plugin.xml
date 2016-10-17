@@ -2,22 +2,22 @@
 <?eclipse version="3.0"?>
 <plugin>
 
-   <!-- This is an example for providing an own category 
+ 
       <extension
          point="org.knime.workbench.repository.categories">
       <category
             description="Category containing my nodes"
-            icon="icons/default.png"
-            level-id="myNodes"
-            name="My nodes"
+            icon="icons/bigdataSNA.jpg"
+            level-id="bigdataSNA"
+            name="bigdata Social Network Analysis"
             path="/"/>
    </extension>
-   -->
+
    
    <extension
          point="org.knime.workbench.repository.nodes">
       <node
-            category-path="/"
+            category-path="/bigdataSNA"
             factory-class="org.fieldstar.bigdataSNA.CommunityDetectionNodeFactory"
             id="org.fieldstar.bigdataSNA.CommunityDetectionNodeFactory"/>
    </extension>
